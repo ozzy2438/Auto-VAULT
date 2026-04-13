@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Callable
 
 from . import __version__
+from .emissions import run_calculate_emissions
 from .paths import curated_dir, sources_dir
 from .synthetic import run_generate_synthetic_invoices
 from .validation import run_validate_invoices
@@ -100,12 +101,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="CSV input path for invoice records.",
     )
     emissions.add_argument(
+        "--factor",
+        type=Path,
+        default=sources_dir() / "emissions" / "defra_2024_scope2_factor.csv",
+        help="CSV input path for the DEFRA electricity factor.",
+    )
+    emissions.add_argument(
         "--output",
         type=Path,
         default=curated_dir() / "secr_emissions_summary.csv",
         help="CSV output path for emissions summaries.",
     )
-    emissions.set_defaults(handler=_not_implemented("calculate-emissions"))
+    emissions.set_defaults(handler=run_calculate_emissions)
 
     demo = subparsers.add_parser(
         "run-demo",

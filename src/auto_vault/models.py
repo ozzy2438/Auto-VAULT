@@ -71,3 +71,20 @@ class ValidationResult:
 
     def to_row(self) -> dict[str, object]:
         return asdict(self)
+
+
+@dataclass(frozen=True, slots=True)
+class EmissionsResult:
+    summary_level: str
+    entity_id: str
+    entity_name: str
+    period_start: str
+    period_end: str
+    kwh: float
+    defra_factor_kgco2e_per_kwh: float
+    kgco2e: float
+    tco2e: float
+    methodology: str
+
+    def to_row(self) -> dict[str, object]:
+        return asdict(self)
