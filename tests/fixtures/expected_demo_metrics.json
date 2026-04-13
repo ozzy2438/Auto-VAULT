@@ -1,8 +1,8 @@
 {
-  "synthetic_invoice_count": 72,
+  "synthetic_invoice_count": 432,
   "flagged_invoices": 3,
   "savings_opportunity_gbp": 1840.0,
-  "company_tco2e": 1707.53,
-  "company_budget_gbp": 490097.29,
-  "latest_month_accrual_gbp": 9600.86
+  "company_tco2e": 9864.295,
+  "company_budget_gbp": 1905615.06,
+  "latest_month_accrual_gbp": 36996.47
 }

@@ -11,6 +11,7 @@ from pathlib import Path
 
 from .constants import (
     DEFAULT_DUOS_GBP_PER_KWH,
+    HISTORICAL_YEARS,
     DEFAULT_MARKET_MULTIPLIER,
     DEFAULT_RANDOM_SEED,
     DEFAULT_STANDING_CHARGE_GBP_PER_DAY,
@@ -36,6 +37,15 @@ SITE_PROFILES = [
     SiteProfile("SITE-01", "Birmingham Forge", "2200001234501", 1180.0, 0.97),
     SiteProfile("SITE-02", "Walsall Pressing", "2200001234502", 1340.0, 1.00),
     SiteProfile("SITE-03", "Coventry Finishing", "2200001234503", 1460.0, 1.05),
+    SiteProfile("SITE-04", "Wolverhampton Fabrication", "2200001234504", 980.0, 0.92),
+    SiteProfile("SITE-05", "Dudley Components", "2200001234505", 1120.0, 0.95),
+    SiteProfile("SITE-06", "Solihull Packaging", "2200001234506", 1260.0, 0.98),
+    SiteProfile("SITE-07", "West Bromwich Castings", "2200001234507", 1510.0, 1.03),
+    SiteProfile("SITE-08", "Cannock Materials", "2200001234508", 1670.0, 1.06),
+    SiteProfile("SITE-09", "Tamworth Logistics Hub", "2200001234509", 910.0, 0.90),
+    SiteProfile("SITE-10", "Redditch Process Plant", "2200001234510", 1080.0, 0.94),
+    SiteProfile("SITE-11", "Stafford Assembly", "2200001234511", 1390.0, 1.01),
+    SiteProfile("SITE-12", "Telford Distribution", "2200001234512", 1590.0, 1.04),
 ]
 
 SEEDED_ANOMALIES_GBP = {
@@ -47,7 +57,7 @@ SEEDED_ANOMALIES_GBP = {
 
 def month_starts() -> list[date]:
     starts: list[date] = []
-    for year in (2024, 2025):
+    for year in HISTORICAL_YEARS:
         for month in range(1, 13):
             starts.append(date(year, month, 1))
     return starts

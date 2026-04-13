@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+from auto_vault.constants import SITE_COUNT
 from auto_vault.forecasting import build_budget_forecast
 from auto_vault.io import write_csv_rows
 from auto_vault.synthetic import generate_synthetic_invoices
@@ -21,5 +22,5 @@ def test_budget_forecast_matches_golden_summary(tmp_path: Path) -> None:
     expected = json.loads((FIXTURES / "expected_budget_forecast_summary.json").read_text())
 
     assert summary == expected
-    assert sum(1 for row in results if row.summary_level == "site") == 36
+    assert sum(1 for row in results if row.summary_level == "site") == SITE_COUNT * 12
     assert sum(1 for row in results if row.summary_level == "company") == 12

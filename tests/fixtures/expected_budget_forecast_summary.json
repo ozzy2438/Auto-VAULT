@@ -1,8 +1,8 @@
 {
   "forecast_start_month": "2026-01-01",
   "months_ahead": 12,
-  "company_forecast_kwh": 4200226.37,
-  "company_forecast_cost_gbp": 490097.29,
+  "company_forecast_kwh": 16314835.57,
+  "company_forecast_cost_gbp": 1905615.06,
   "confidence_band_pct": 0.06,
   "budget_basis": "Same-month trailing actuals with site efficiency targets and a modest wholesale uplift for 2026 planning."
 }

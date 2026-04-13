@@ -1,8 +1,8 @@
 {
-  "total_invoices": 72,
+  "total_invoices": 432,
   "flagged_invoices": 3,
-  "total_expected_gbp": 931975.2,
-  "total_billed_gbp": 933815.2,
+  "total_expected_gbp": 5567011.02,
+  "total_billed_gbp": 5568851.02,
   "total_savings_opportunity_gbp": 1840.0,
   "top_anomaly_reason": "Duplicate standing charge",
   "anomaly_reason_counts": {

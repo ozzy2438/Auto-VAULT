@@ -17,5 +17,5 @@ def test_render_report_creates_shareable_html(tmp_path: Path, monkeypatch) -> No
     assert output_path.exists()
     assert "Executive Snapshot" in html
     assert "GBP 1,840.00" in html
-    assert "1,707.530 tCO2e" in html
-    assert "GBP 490,097.29" in html
+    assert "9,864.295 tCO2e" in html
+    assert "GBP 1,905,615.06" in html

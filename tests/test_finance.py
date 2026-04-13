@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+from auto_vault.constants import HISTORICAL_YEARS, SITE_COUNT
 from auto_vault.finance import build_finance_report
 from auto_vault.forecasting import build_budget_forecast
 from auto_vault.io import write_csv_rows, write_json
@@ -35,8 +36,9 @@ def test_finance_report_matches_golden_summary(tmp_path: Path) -> None:
         FINANCE_ASSUMPTIONS,
     )
     expected = json.loads((FIXTURES / "expected_finance_summary.json").read_text())
+    historical_months = len(HISTORICAL_YEARS) * 12
 
     assert summary == expected
-    assert sum(1 for row in monthly_results if row.summary_level == "site") == 72
-    assert sum(1 for row in monthly_results if row.summary_level == "company") == 24
-    assert len(accrual_results) == 4
+    assert sum(1 for row in monthly_results if row.summary_level == "site") == SITE_COUNT * historical_months
+    assert sum(1 for row in monthly_results if row.summary_level == "company") == historical_months
+    assert len(accrual_results) == SITE_COUNT + 1
