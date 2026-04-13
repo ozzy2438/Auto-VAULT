@@ -2,7 +2,7 @@
 
 ## Project in One Sentence
 
-I built a UK-focused energy analytics MVP that validates supplier invoices, calculates DEFRA Scope 2 emissions, produces a 12-month budget forecast, and generates finance-style month-end accruals for a Birmingham manufacturing SME.
+I built a UK-focused energy analytics MVP that validates supplier invoices, calculates DEFRA Scope 2 emissions, produces a 12-month budget forecast, and generates finance-style month-end accruals for a multi-site West Midlands industrial portfolio.
 
 ## Problem
 
@@ -34,7 +34,7 @@ I designed a reproducible Python package and CLI with five connected layers:
 ## Workflow
 
 1. start from source samples and internal planning assumptions
-2. generate 72 synthetic invoices across 3 UK sites
+2. generate 432 synthetic invoices across 12 UK sites over 36 months
 3. recompute expected invoice totals from wholesale price, tariff multiplier, network adder, and standing charge
 4. flag anomalies and quantify savings opportunity
 5. convert electricity use to location-based Scope 2 emissions
@@ -46,13 +46,13 @@ I designed a reproducible Python package and CLI with five connected layers:
 
 The deterministic demo currently shows:
 
-- `72` invoice records
+- `432` invoice records
 - `3` duplicate-standing-charge anomalies
 - `GBP 1,840.00` savings opportunity
-- `~£934k` historical validated spend across the 24-month period
-- `1,707.53 tCO2e` company Scope 2 total
-- `GBP 490,097.29` next-12-month UK budget
-- `GBP 9,600.86` latest month-end accrual
+- `~£5.57m` historical validated spend across the 36-month period
+- `9,864.295 tCO2e` company Scope 2 total
+- `GBP 1,905,615.06` next-12-month UK budget
+- `GBP 36,996.47` latest month-end accrual
 
 ## Why This Is Strong for Energy and Financial Analysis Roles
 
@@ -66,4 +66,4 @@ This project shows that I can connect energy data, finance logic, and sustainabi
 
 ## Short Interview Version
 
-I built a UK energy invoice validation and reporting MVP for a Birmingham manufacturer. It uses official public-source samples plus synthetic invoice data to detect overbilling, calculate DEFRA Scope 2 emissions, produce a 12-month energy budget, and generate month-end accrual outputs. I packaged it as a tested Python CLI so the whole workflow can be rerun in one command.
+I built a UK energy invoice validation and reporting MVP for a multi-site West Midlands industrial portfolio. It uses official public-source samples plus synthetic invoice data to detect overbilling, calculate DEFRA Scope 2 emissions, produce a 12-month energy budget, and generate month-end accrual outputs. I packaged it as a tested Python CLI so the whole workflow can be rerun in one command.

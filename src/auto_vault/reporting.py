@@ -98,7 +98,7 @@ def build_html_report(run_dir: Path) -> str:
         ],
     )
     talk_track = [
-        "This is a UK energy analytics workflow for a Birmingham manufacturing SME with three sites.",
+        "This is a UK energy analytics workflow for a 12-site West Midlands industrial portfolio.",
         "The model recreates expected invoice costs from public-market assumptions and flags billing anomalies automatically.",
         "The same workflow converts usage into DEFRA Scope 2 emissions, then extends into a 12-month budget and month-end finance close outputs.",
         "The outcome is a tested, repeatable workflow that joins sustainability reporting, invoice validation, forecasting, and accrual logic.",
@@ -294,7 +294,7 @@ def build_html_report(run_dir: Path) -> str:
         <p class="eyebrow">Auto-VAULT | UK Demo Report</p>
         <h1>Energy invoice validation, carbon reporting, budgeting, and finance close in one workflow.</h1>
         <p>
-          This report turns the command-line run into a presentation-ready story for a Birmingham manufacturing SME.
+          This report turns the command-line run into a presentation-ready story for a multi-site West Midlands industrial portfolio.
           It shows what the workflow checked, what it found, and why the result matters commercially and for SECR-style reporting.
         </p>
       </section>
@@ -374,10 +374,10 @@ def build_html_report(run_dir: Path) -> str:
       <section class="section">
         <h2>How To Present This Live</h2>
         <ul>
-          <li>Start with the six KPI cards and say the workflow validates invoices, quantifies savings, and extends into carbon and finance outputs.</li>
+          <li>Start with the six KPI cards and say the workflow validates 432 invoices, quantifies savings, and extends into carbon and finance outputs.</li>
           <li>Move to the anomaly table and explain that the system identified three duplicate standing-charge issues worth {escape(_format_gbp(float(validation_summary["total_savings_opportunity_gbp"])))}.</li>
           <li>Show the SECR table to connect energy accounting with sustainability reporting and point to the total of {escape(_format_tco2e(float(company_emissions["tco2e"])))}.</li>
-          <li>Finish on budget and accruals to show that the workflow is useful for finance planning, not just auditing past invoices.</li>
+          <li>Finish on budget and accruals to show that the workflow is useful for finance planning, not just auditing past invoices, with a next-12-month budget above GBP 1.9m.</li>
         </ul>
         <p class="footer">Generated from: {escape(str(run_dir))}</p>
       </section>

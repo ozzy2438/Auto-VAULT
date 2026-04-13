@@ -1,8 +1,8 @@
 # Auto-VAULT
 
-Auto-VAULT is a UK-focused energy invoice validation and Scope 2 reporting MVP for SMEs that need SECR-ready energy governance.
+Auto-VAULT is a UK-focused energy invoice validation and Scope 2 reporting MVP for mid-sized industrial and commercial energy users that need SECR-ready governance.
 
-The current milestone demonstrates a Birmingham metalworking company with three sites. It uses versioned official-source samples plus synthetic invoice generation to show how a portfolio can:
+The current milestone demonstrates a multi-site West Midlands industrial portfolio. It uses versioned official-source samples plus synthetic invoice generation to show how a portfolio can:
 
 - recreate supplier invoices from market assumptions
 - flag anomalous bills and estimate savings opportunity
@@ -15,13 +15,13 @@ The current milestone demonstrates a Birmingham metalworking company with three 
 
 - Company: `Birmingham Metal Works Ltd`
 - Region: `United Kingdom (West Midlands)`
-- Portfolio: `3 sites`
-- Coverage: `24 monthly billing periods`
-- Output volume: `72 synthetic invoices`
+- Portfolio: `12 sites`
+- Coverage: `36 monthly billing periods`
+- Output volume: `432 synthetic invoices`
 - Seeded finding: `3 duplicate standing-charge anomalies worth GBP 1,840.00`
 - Forecast layer: `12-month UK budget forecast`
 - Finance layer: `monthly actual-vs-benchmark reporting and month-end accrual`
-- Operating scale: `~£934k historical spend across ~8.25 GWh over 24 months`
+- Operating scale: `~£5.57m historical spend across ~47.65 GWh over 36 months`
 
 ## Data Provenance
 
@@ -75,12 +75,12 @@ All curated outputs are written under `data/curated/` and include:
 
 The deterministic seed currently produces:
 
-- `72` invoices
+- `432` invoices
 - `3` flagged anomalies
 - `GBP 1,840.00` savings opportunity
-- `1,707.53 tCO2e` company Scope 2 total
-- `GBP 490,097.29` next-12-month budget
-- `GBP 9,600.86` month-end accrual on the latest close
+- `9,864.295 tCO2e` company Scope 2 total
+- `GBP 1,905,615.06` next-12-month budget
+- `GBP 36,996.47` month-end accrual on the latest close
 
 ## Portfolio Positioning
 

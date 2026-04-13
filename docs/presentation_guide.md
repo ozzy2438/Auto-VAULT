@@ -21,7 +21,7 @@ This file is the easiest visual artifact to show in an interview, live call, or 
 
 Say:
 
-> I built a UK energy analytics workflow for a Birmingham manufacturing SME. It validates invoices, calculates Scope 2 emissions, produces a 12-month budget, and generates month-end accrual outputs in one tested workflow.
+> I built a UK energy analytics workflow for a 12-site West Midlands industrial portfolio. It validates invoices, calculates Scope 2 emissions, produces a 12-month budget, and generates month-end accrual outputs in one tested workflow.
 
 Show:
 
@@ -31,7 +31,7 @@ Show:
 
 Say:
 
-> The workflow checked 72 invoices across a meaningful industrial cost base, found 3 billing anomalies, and identified GBP 1,840.00 in savings opportunity.
+> The workflow checked 432 invoices across a meaningful industrial cost base, found 3 billing anomalies, and identified GBP 1,840.00 in savings opportunity.
 
 Show:
 
@@ -52,7 +52,7 @@ Show:
 
 Say:
 
-> This is not only an audit tool. It also produces a 12-month UK energy budget of roughly GBP 490k and a month-end accrual estimate of about GBP 9.6k, which makes it useful for finance and planning teams.
+> This is not only an audit tool. It also produces a 12-month UK energy budget of roughly GBP 1.9m and a month-end accrual estimate of about GBP 37k, which makes it useful for finance and planning teams.
 
 Show:
 
