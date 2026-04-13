@@ -1,0 +1,17 @@
+"""Project constants and shared assumptions."""
+
+from __future__ import annotations
+
+PROJECT_NAME = "Auto-VAULT"
+TARGET_REGION = "United Kingdom (West Midlands)"
+TARGET_COMPANY = "Birmingham Metal Works Ltd"
+SITE_COUNT = 3
+TOTAL_INVOICES = 72
+DEFAULT_RANDOM_SEED = 2438
+
+DEFRA_SCOPE_2_FACTOR_KGCO2E_PER_KWH = 0.207
+DEFAULT_STANDING_CHARGE_GBP_PER_DAY = 0.45
+DEFAULT_MARKET_MULTIPLIER = 1.18
+DEFAULT_DUOS_GBP_PER_KWH = 0.021
+DEFAULT_BILLING_DAYS = 30
+DEFAULT_FORMULA_VERSION = "uk-secr-v1"
