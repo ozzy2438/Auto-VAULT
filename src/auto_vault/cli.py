@@ -8,6 +8,7 @@ from typing import Callable
 
 from . import __version__
 from .paths import curated_dir, sources_dir
+from .synthetic import run_generate_synthetic_invoices
 
 CommandHandler = Callable[[argparse.Namespace], int]
 
@@ -32,12 +33,30 @@ def build_parser() -> argparse.ArgumentParser:
         help="Create deterministic synthetic invoice records.",
     )
     generate.add_argument(
+        "--prices",
+        type=Path,
+        default=sources_dir() / "market" / "entsoe_day_ahead_prices_sample.csv",
+        help="CSV input path for sampled market prices.",
+    )
+    generate.add_argument(
+        "--load-shape",
+        type=Path,
+        default=sources_dir() / "demand" / "national_grid_load_shape_sample.csv",
+        help="CSV input path for seasonal demand shaping.",
+    )
+    generate.add_argument(
+        "--seed",
+        type=int,
+        default=2438,
+        help="Random seed used for deterministic invoice generation.",
+    )
+    generate.add_argument(
         "--output",
         type=Path,
         default=curated_dir() / "synthetic_invoices.csv",
         help="CSV output path for generated synthetic invoices.",
     )
-    generate.set_defaults(handler=_not_implemented("generate-synthetic-invoices"))
+    generate.set_defaults(handler=run_generate_synthetic_invoices)
 
     validate = subparsers.add_parser(
         "validate-invoices",
