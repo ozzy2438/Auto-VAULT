@@ -9,6 +9,7 @@ from typing import Callable
 from . import __version__
 from .demo import run_demo
 from .emissions import run_calculate_emissions
+from .forecasting import run_forecast_budget
 from .paths import curated_dir, sources_dir
 from .synthetic import run_generate_synthetic_invoices
 from .validation import run_validate_invoices
@@ -114,6 +115,42 @@ def build_parser() -> argparse.ArgumentParser:
         help="CSV output path for emissions summaries.",
     )
     emissions.set_defaults(handler=run_calculate_emissions)
+
+    forecast = subparsers.add_parser(
+        "forecast-budget",
+        help="Create a 12-month UK energy budget forecast.",
+    )
+    forecast.add_argument(
+        "--input",
+        type=Path,
+        default=curated_dir() / "synthetic_invoices.csv",
+        help="CSV input path for invoice records.",
+    )
+    forecast.add_argument(
+        "--prices",
+        type=Path,
+        default=sources_dir() / "market" / "entsoe_day_ahead_prices_sample.csv",
+        help="CSV input path for sampled market prices.",
+    )
+    forecast.add_argument(
+        "--assumptions",
+        type=Path,
+        default=sources_dir() / "planning" / "uk_budget_assumptions.json",
+        help="JSON assumptions file for the UK budget forecast.",
+    )
+    forecast.add_argument(
+        "--output",
+        type=Path,
+        default=curated_dir() / "uk_budget_forecast.csv",
+        help="CSV output path for the UK budget forecast.",
+    )
+    forecast.add_argument(
+        "--summary-output",
+        type=Path,
+        default=curated_dir() / "uk_budget_forecast_summary.json",
+        help="JSON output path for the UK budget summary.",
+    )
+    forecast.set_defaults(handler=run_forecast_budget)
 
     demo = subparsers.add_parser(
         "run-demo",

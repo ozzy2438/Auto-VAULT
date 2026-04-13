@@ -29,6 +29,15 @@
       "transformation_note": "Extracted to a one-row CSV containing the location-based electricity factor used by the MVP.",
       "intended_use": "Calculate SECR-ready Scope 2 emissions from electricity consumption.",
       "official_source": true
+    },
+    {
+      "path": "data/sources/planning/uk_budget_assumptions.json",
+      "source_name": "Auto-VAULT UK planning assumptions",
+      "source_url": "",
+      "retrieval_date": "2026-04-13",
+      "transformation_note": "Internal planning assumptions layered on top of official UK market samples to create a deterministic 12-month budget forecast for the demo.",
+      "intended_use": "Drive budget and forecasting outputs for the UK SME scenario.",
+      "official_source": false
     }
   ]
 }

@@ -88,3 +88,20 @@ class EmissionsResult:
 
     def to_row(self) -> dict[str, object]:
         return asdict(self)
+
+
+@dataclass(frozen=True, slots=True)
+class BudgetForecastResult:
+    summary_level: str
+    entity_id: str
+    entity_name: str
+    forecast_month: str
+    forecast_kwh: float
+    forecast_unit_rate_gbp_per_kwh: float
+    forecast_cost_gbp: float
+    budget_low_gbp: float
+    budget_high_gbp: float
+    basis: str
+
+    def to_row(self) -> dict[str, object]:
+        return asdict(self)

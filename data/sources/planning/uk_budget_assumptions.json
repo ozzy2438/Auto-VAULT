@@ -1,0 +1,12 @@
+{
+  "forecast_start_month": "2026-01-01",
+  "months_ahead": 12,
+  "wholesale_uplift_pct": 0.025,
+  "confidence_band_pct": 0.06,
+  "site_efficiency_targets_pct": {
+    "SITE-01": 0.010,
+    "SITE-02": 0.012,
+    "SITE-03": 0.015
+  },
+  "budget_basis": "Same-month trailing actuals with site efficiency targets and a modest wholesale uplift for 2026 planning."
+}
