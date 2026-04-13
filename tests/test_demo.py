@@ -24,4 +24,5 @@ def test_run_demo_writes_expected_artifacts(tmp_path: Path, monkeypatch) -> None
     assert (tmp_path / "uk_finance_monthly_report.csv").exists()
     assert (tmp_path / "uk_month_end_accruals.csv").exists()
     assert (tmp_path / "uk_finance_summary.json").exists()
+    assert (tmp_path / "presentation_report.html").exists()
     assert manifest["metrics"] == expected_metrics

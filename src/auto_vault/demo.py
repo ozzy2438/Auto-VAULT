@@ -12,6 +12,7 @@ from .finance import build_finance_report
 from .forecasting import build_budget_forecast
 from .io import read_json, write_csv_rows, write_json
 from .paths import find_repo_root, sources_dir
+from .reporting import build_html_report
 from .synthetic import generate_synthetic_invoices
 from .validation import validate_invoices
 
@@ -44,6 +45,7 @@ def run_demo(args: argparse.Namespace) -> int:
     finance_accrual_output = output_dir / "uk_month_end_accruals.csv"
     finance_summary_output = output_dir / "uk_finance_summary.json"
     run_manifest_output = output_dir / "run_manifest.json"
+    presentation_report_output = output_dir / "presentation_report.html"
 
     invoices = generate_synthetic_invoices(
         prices_path=prices_path,
@@ -96,6 +98,7 @@ def run_demo(args: argparse.Namespace) -> int:
             "uk_finance_monthly_report": _relative_to_repo(finance_monthly_output, repo_root),
             "uk_month_end_accruals": _relative_to_repo(finance_accrual_output, repo_root),
             "uk_finance_summary": _relative_to_repo(finance_summary_output, repo_root),
+            "presentation_report": _relative_to_repo(presentation_report_output, repo_root),
         },
         "metrics": {
             "synthetic_invoice_count": len(invoices),
@@ -107,6 +110,7 @@ def run_demo(args: argparse.Namespace) -> int:
         },
     }
     write_json(run_manifest_output, run_manifest)
+    presentation_report_output.write_text(build_html_report(output_dir), encoding="utf-8")
 
     print(
         f"Demo complete: {len(invoices)} invoices, "

@@ -12,6 +12,7 @@ from .emissions import run_calculate_emissions
 from .finance import run_build_finance_report
 from .forecasting import run_forecast_budget
 from .paths import curated_dir, sources_dir
+from .reporting import run_render_report
 from .synthetic import run_generate_synthetic_invoices
 from .validation import run_validate_invoices
 
@@ -200,6 +201,24 @@ def build_parser() -> argparse.ArgumentParser:
         help="JSON output path for the finance summary.",
     )
     finance.set_defaults(handler=run_build_finance_report)
+
+    report = subparsers.add_parser(
+        "render-report",
+        help="Create a shareable HTML presentation report from a demo run.",
+    )
+    report.add_argument(
+        "--run-dir",
+        type=Path,
+        default=curated_dir(),
+        help="Directory containing demo outputs such as run_manifest.json.",
+    )
+    report.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="HTML output path for the presentation report.",
+    )
+    report.set_defaults(handler=run_render_report)
 
     demo = subparsers.add_parser(
         "run-demo",
