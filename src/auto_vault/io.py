@@ -31,3 +31,8 @@ def write_csv_rows(path: Path, rows: list[dict[str, Any]]) -> None:
 
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def write_json(path: Path, payload: Any) -> None:
+    ensure_parent(path)
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")

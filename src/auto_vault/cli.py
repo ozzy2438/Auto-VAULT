@@ -9,6 +9,7 @@ from typing import Callable
 from . import __version__
 from .paths import curated_dir, sources_dir
 from .synthetic import run_generate_synthetic_invoices
+from .validation import run_validate_invoices
 
 CommandHandler = Callable[[argparse.Namespace], int]
 
@@ -80,7 +81,13 @@ def build_parser() -> argparse.ArgumentParser:
         default=curated_dir() / "invoice_validation_results.csv",
         help="CSV output path for validation results.",
     )
-    validate.set_defaults(handler=_not_implemented("validate-invoices"))
+    validate.add_argument(
+        "--summary-output",
+        type=Path,
+        default=curated_dir() / "invoice_validation_summary.json",
+        help="JSON output path for validation portfolio summary.",
+    )
+    validate.set_defaults(handler=run_validate_invoices)
 
     emissions = subparsers.add_parser(
         "calculate-emissions",
