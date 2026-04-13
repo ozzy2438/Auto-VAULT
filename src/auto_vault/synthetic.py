@@ -33,9 +33,9 @@ class SiteProfile:
 
 
 SITE_PROFILES = [
-    SiteProfile("SITE-01", "Birmingham Forge", "2200001234501", 118.0, 0.97),
-    SiteProfile("SITE-02", "Walsall Pressing", "2200001234502", 134.0, 1.00),
-    SiteProfile("SITE-03", "Coventry Finishing", "2200001234503", 146.0, 1.05),
+    SiteProfile("SITE-01", "Birmingham Forge", "2200001234501", 1180.0, 0.97),
+    SiteProfile("SITE-02", "Walsall Pressing", "2200001234502", 1340.0, 1.00),
+    SiteProfile("SITE-03", "Coventry Finishing", "2200001234503", 1460.0, 1.05),
 ]
 
 SEEDED_ANOMALIES_GBP = {
