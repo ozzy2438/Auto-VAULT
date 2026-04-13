@@ -19,4 +19,9 @@ def test_run_demo_writes_expected_artifacts(tmp_path: Path, monkeypatch) -> None
     assert (tmp_path / "invoice_validation_results.csv").exists()
     assert (tmp_path / "invoice_validation_summary.json").exists()
     assert (tmp_path / "secr_emissions_summary.csv").exists()
+    assert (tmp_path / "uk_budget_forecast.csv").exists()
+    assert (tmp_path / "uk_budget_forecast_summary.json").exists()
+    assert (tmp_path / "uk_finance_monthly_report.csv").exists()
+    assert (tmp_path / "uk_month_end_accruals.csv").exists()
+    assert (tmp_path / "uk_finance_summary.json").exists()
     assert manifest["metrics"] == expected_metrics

@@ -9,6 +9,7 @@ from typing import Callable
 from . import __version__
 from .demo import run_demo
 from .emissions import run_calculate_emissions
+from .finance import run_build_finance_report
 from .forecasting import run_forecast_budget
 from .paths import curated_dir, sources_dir
 from .synthetic import run_generate_synthetic_invoices
@@ -151,6 +152,54 @@ def build_parser() -> argparse.ArgumentParser:
         help="JSON output path for the UK budget summary.",
     )
     forecast.set_defaults(handler=run_forecast_budget)
+
+    finance = subparsers.add_parser(
+        "build-finance-report",
+        help="Create UK finance reporting and month-end accrual outputs.",
+    )
+    finance.add_argument(
+        "--invoices",
+        type=Path,
+        default=curated_dir() / "synthetic_invoices.csv",
+        help="CSV input path for invoice records.",
+    )
+    finance.add_argument(
+        "--validation",
+        type=Path,
+        default=curated_dir() / "invoice_validation_results.csv",
+        help="CSV input path for validation results.",
+    )
+    finance.add_argument(
+        "--budget-summary",
+        type=Path,
+        default=curated_dir() / "uk_budget_forecast_summary.json",
+        help="JSON input path for the UK budget forecast summary.",
+    )
+    finance.add_argument(
+        "--assumptions",
+        type=Path,
+        default=sources_dir() / "planning" / "uk_finance_assumptions.json",
+        help="JSON assumptions file for finance close rules.",
+    )
+    finance.add_argument(
+        "--monthly-output",
+        type=Path,
+        default=curated_dir() / "uk_finance_monthly_report.csv",
+        help="CSV output path for the monthly finance report.",
+    )
+    finance.add_argument(
+        "--accrual-output",
+        type=Path,
+        default=curated_dir() / "uk_month_end_accruals.csv",
+        help="CSV output path for month-end accruals.",
+    )
+    finance.add_argument(
+        "--summary-output",
+        type=Path,
+        default=curated_dir() / "uk_finance_summary.json",
+        help="JSON output path for the finance summary.",
+    )
+    finance.set_defaults(handler=run_build_finance_report)
 
     demo = subparsers.add_parser(
         "run-demo",

@@ -1,0 +1,5 @@
+{
+  "close_day_of_month": 25,
+  "report_currency": "GBP",
+  "accrual_basis": "Accrue the days between the finance close date and month end using benchmark daily cost from the latest validated invoice."
+}

@@ -105,3 +105,34 @@ class BudgetForecastResult:
 
     def to_row(self) -> dict[str, object]:
         return asdict(self)
+
+
+@dataclass(frozen=True, slots=True)
+class FinanceMonthlyResult:
+    summary_level: str
+    entity_id: str
+    entity_name: str
+    month_start: str
+    billed_actual_gbp: float
+    benchmark_gbp: float
+    variance_gbp: float
+    anomaly_count: int
+    period_status: str
+
+    def to_row(self) -> dict[str, object]:
+        return asdict(self)
+
+
+@dataclass(frozen=True, slots=True)
+class AccrualResult:
+    summary_level: str
+    entity_id: str
+    entity_name: str
+    accrual_month: str
+    close_day_of_month: int
+    unbilled_days: int
+    accrued_cost_gbp: float
+    accrual_basis: str
+
+    def to_row(self) -> dict[str, object]:
+        return asdict(self)

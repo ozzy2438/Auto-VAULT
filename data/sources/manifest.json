@@ -38,6 +38,15 @@
       "transformation_note": "Internal planning assumptions layered on top of official UK market samples to create a deterministic 12-month budget forecast for the demo.",
       "intended_use": "Drive budget and forecasting outputs for the UK SME scenario.",
       "official_source": false
+    },
+    {
+      "path": "data/sources/planning/uk_finance_assumptions.json",
+      "source_name": "Auto-VAULT UK finance close assumptions",
+      "source_url": "",
+      "retrieval_date": "2026-04-13",
+      "transformation_note": "Internal finance close assumptions used to estimate month-end accruals from validated benchmark costs.",
+      "intended_use": "Produce tailored finance reporting and accrual outputs for the UK SME scenario.",
+      "official_source": false
     }
   ]
 }

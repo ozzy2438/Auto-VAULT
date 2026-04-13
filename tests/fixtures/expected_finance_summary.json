@@ -1,0 +1,10 @@
+{
+  "report_currency": "GBP",
+  "months_reported": 24,
+  "company_historical_billed_gbp": 91693.21,
+  "company_historical_variance_gbp": 1840.0,
+  "next_12m_budget_gbp": 47339.87,
+  "latest_month_accrual_gbp": 932.63,
+  "open_month": "2025-12-01",
+  "close_day_of_month": 25
+}
