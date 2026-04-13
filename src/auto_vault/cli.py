@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Callable
 
 from . import __version__
+from .demo import run_demo
 from .emissions import run_calculate_emissions
 from .paths import curated_dir, sources_dir
 from .synthetic import run_generate_synthetic_invoices
@@ -124,7 +125,13 @@ def build_parser() -> argparse.ArgumentParser:
         default=curated_dir(),
         help="Directory for curated pipeline outputs.",
     )
-    demo.set_defaults(handler=_not_implemented("run-demo"))
+    demo.add_argument(
+        "--seed",
+        type=int,
+        default=2438,
+        help="Random seed used for deterministic demo runs.",
+    )
+    demo.set_defaults(handler=run_demo)
 
     return parser
 
