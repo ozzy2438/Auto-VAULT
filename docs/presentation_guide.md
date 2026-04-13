@@ -31,7 +31,7 @@ Show:
 
 Say:
 
-> The workflow checked 72 invoices, found 3 billing anomalies, and identified GBP 1,840.00 in savings opportunity.
+> The workflow checked 72 invoices across a meaningful industrial cost base, found 3 billing anomalies, and identified GBP 1,840.00 in savings opportunity.
 
 Show:
 
@@ -52,7 +52,7 @@ Show:
 
 Say:
 
-> This is not only an audit tool. It also produces a 12-month UK energy budget and a month-end accrual estimate, which makes it useful for finance and planning teams.
+> This is not only an audit tool. It also produces a 12-month UK energy budget of roughly GBP 490k and a month-end accrual estimate of about GBP 9.6k, which makes it useful for finance and planning teams.
 
 Show:
 

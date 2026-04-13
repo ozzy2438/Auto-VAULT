@@ -21,6 +21,7 @@ The current milestone demonstrates a Birmingham metalworking company with three 
 - Seeded finding: `3 duplicate standing-charge anomalies worth GBP 1,840.00`
 - Forecast layer: `12-month UK budget forecast`
 - Finance layer: `monthly actual-vs-benchmark reporting and month-end accrual`
+- Operating scale: `~£934k historical spend across ~8.25 GWh over 24 months`
 
 ## Data Provenance
 
@@ -77,9 +78,9 @@ The deterministic seed currently produces:
 - `72` invoices
 - `3` flagged anomalies
 - `GBP 1,840.00` savings opportunity
-- `170.753 tCO2e` company Scope 2 total
-- `GBP 47,339.87` next-12-month budget
-- `GBP 932.63` month-end accrual on the latest close
+- `1,707.53 tCO2e` company Scope 2 total
+- `GBP 490,097.29` next-12-month budget
+- `GBP 9,600.86` month-end accrual on the latest close
 
 ## Portfolio Positioning
 

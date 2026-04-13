@@ -49,9 +49,10 @@ The deterministic demo currently shows:
 - `72` invoice records
 - `3` duplicate-standing-charge anomalies
 - `GBP 1,840.00` savings opportunity
-- `170.753 tCO2e` company Scope 2 total
-- `GBP 47,339.87` next-12-month UK budget
-- `GBP 932.63` latest month-end accrual
+- `~£934k` historical validated spend across the 24-month period
+- `1,707.53 tCO2e` company Scope 2 total
+- `GBP 490,097.29` next-12-month UK budget
+- `GBP 9,600.86` latest month-end accrual
 
 ## Why This Is Strong for Energy and Financial Analysis Roles
 
