@@ -53,6 +53,7 @@ PYTHONPATH=src python3 -m auto_vault run-demo
 - `auto-vault calculate-emissions`
 - `auto-vault forecast-budget`
 - `auto-vault build-finance-report`
+- `auto-vault render-report`
 - `auto-vault run-demo`
 
 All curated outputs are written under `data/curated/` and include:
@@ -66,6 +67,7 @@ All curated outputs are written under `data/curated/` and include:
 - `uk_finance_monthly_report.csv`
 - `uk_month_end_accruals.csv`
 - `uk_finance_summary.json`
+- `presentation_report.html`
 - `run_manifest.json`
 
 ## Expected Demo Outcome
@@ -90,6 +92,7 @@ This project is designed to present a UK energy and sustainability analytics wor
 - reproducible Python package, CLI, and tests instead of a notebook-only demo
 
 For a concise interview narrative, see [docs/uk_case_study.md](/Users/osmanorka/Documents/New project/docs/uk_case_study.md).
+For a step-by-step visual handoff, see [docs/presentation_guide.md](/Users/osmanorka/Documents/New project/docs/presentation_guide.md).
 
 ## Tests
 
