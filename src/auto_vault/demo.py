@@ -15,7 +15,11 @@ from .validation import validate_invoices
 
 
 def _relative_to_repo(path: Path, repo_root: Path) -> str:
-    return str(path.resolve().relative_to(repo_root))
+    resolved = path.resolve()
+    try:
+        return str(resolved.relative_to(repo_root))
+    except ValueError:
+        return str(resolved)
 
 
 def run_demo(args: argparse.Namespace) -> int:

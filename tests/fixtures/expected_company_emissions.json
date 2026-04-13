@@ -1,0 +1,12 @@
+{
+  "summary_level": "company",
+  "entity_id": "COMPANY",
+  "entity_name": "Birmingham Metal Works Ltd",
+  "period_start": "2024-01-01",
+  "period_end": "2025-12-01",
+  "kwh": 824893.52,
+  "defra_factor_kgco2e_per_kwh": 0.207,
+  "kgco2e": 170752.96,
+  "tco2e": 170.753,
+  "methodology": "location-based"
+}
